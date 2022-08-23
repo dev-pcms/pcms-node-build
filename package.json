@@ -1,0 +1,25 @@
+{
+  "name": "@pcms/pcms-node-build",
+  "version": "0.1.0",
+  "description": "Vite and Vue-compatible local dependency manager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-pcms/pcms-node-build.git"
+  },
+  "author": "Georgiy Korneev",
+  "bugs": {
+    "url": "https://github.com/dev-pcms/pcms-node-build/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/dev-pcms/pcms-node-build#readme",
+  "main": "cli.js",
+  "scripts": {},
+  "license": "AGPL-3.0-only",
+  "bin": {
+    "pcms-node-build": "bin/pcms-node-build.js"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "fs-extra": "^10.1.0"
+  }
+}
