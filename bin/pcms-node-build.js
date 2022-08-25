@@ -2,7 +2,7 @@
 
 import { ArgumentParser } from "argparse";
 import { update } from "../src/update.js";
-import { patch } from "../src/patch.js";
+import { eta } from "../src/eta.js";
 
 const parser = new ArgumentParser({
   description: 'PCMS Node build helper script'
@@ -14,11 +14,11 @@ const updateCommand = commands.add_parser("update", { help: "Updates dependencie
 updateCommand.add_argument("--directory", "-d", { help: "Package directory", default: "." });
 updateCommand.set_defaults({ command: update });
 
-const patchCommand = commands.add_parser("patch", { help: "Removes sections of files depending on configuration" });
-patchCommand.add_argument("--input", "-i", { help: "Input file name" });
-patchCommand.add_argument("--output", "-o", { help: "Output file name" });
-patchCommand.add_argument("--remove", "-r", { help: "Comma-delimited list of sections to remove" });
-patchCommand.set_defaults({ command: patch });
+const etaCommand = commands.add_parser("eta", { help: "Generates file using Eta" });
+etaCommand.add_argument("--template", "-t", { help: "Template filename", metavar: "file", required: true});
+etaCommand.add_argument("--output", "-o", { help: "Output file name", metavar: "file", required: false });
+etaCommand.add_argument("--set", "-s", { help: "Sets template variables",  metavar: "variable=value", nargs: "+"});
+etaCommand.set_defaults({ command: eta });
 
 
 const parsed = parser.parse_args();

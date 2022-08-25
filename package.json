@@ -1,6 +1,6 @@
 {
   "name": "@pcms/pcms-node-build",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Vite and Vue-compatible local dependency manager",
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "argparse": "^2.0.1",
+    "eta": "^1.12.3",
     "fs-extra": "^10.1.0"
   }
 }

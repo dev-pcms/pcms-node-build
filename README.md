@@ -67,6 +67,14 @@ Then run `pcms-node-build update` to update local dependencies.
 It is possible to use `pcms-node-build` script in the `scripts` section of `package.json`.
 For example, you may alter your build script to 
 ```
-npx pcms-node-build update && old-build-script
+pcms-node-build update && old-build-script
 ```
 This ensures that each time the newest versions of the dependencies are used.
+
+## Eta templates support
+To generate a project file using [Eta template engine](https://eta.js.org/) run `pcms-node-build eta`. 
+It has the following required:
+* `--template file` (`-i`) a name of an Eta template file;
+* `--output file` (`-o`) a name of an output file; 
+  If not specified, the output file name is the template file with last suffix removed;
+* `--set var=value [var=value ...]` set template variables.
